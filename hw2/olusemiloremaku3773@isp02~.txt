@@ -1,0 +1,50 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\impre> bash
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+olusemiloremaku3773@impreciousmaku:/mnt/c/Users/impre$  ssh olusemiloremaku3773@isp.tacc.utexas.edu
+(olusemiloremaku3773@isp.tacc.utexas.edu) Password:
+(olusemiloremaku3773@isp.tacc.utexas.edu) TACC_Token:
+Last login: Fri Nov  3 11:59:02 2023 from nat-128-62-79-0.public.utexas.edu
+------------------------------------------------------------------------------
+Welcome to the Texas Advanced Computing Center
+   at The University of Texas at Austin
+
+** Unauthorized use/access is prohibited. **
+
+If you log on to this computer system, you acknowledge your awareness
+of and concurrence with the UT Austin Acceptable Use Policy. The
+University will prosecute violators to the full extent of the law.
+
+TACC Usage Policies:
+http://www.tacc.utexas.edu/user-services/usage-policies/
+
+TACC Support:
+https://portal.tacc.utexas.edu/tacc-consulting
+
+------------------------------------------------------------------------------
+Intel(R) Parallel Studio XE 2020 Update 1 for Linux*
+Copyright (C) 2009-2020 Intel Corporation. All rights reserved.
+[olusemiloremaku3773@isp02 ~]$ echo "My user name is:" $(whoami)
+My user name is: olusemiloremaku3773
+[olusemiloremaku3773@isp02 ~]$ echo "My home directory is:" $(pwd)
+My home directory is: /home/olusemiloremaku3773
+[olusemiloremaku3773@isp02 ~]$ echo "I made this script on:" $(hostname)
+I made this script on: isp02.tacc.utexas.edu
+[olusemiloremaku3773@isp02 ~]$ script session.txt
+Script started, file is session.txt
+[olusemiloremaku3773@isp02 ~]$ whoami
+olusemiloremaku3773
+[olusemiloremaku3773@isp02 ~]$ pwd
+/home/olusemiloremaku3773
+[olusemiloremaku3773@isp02 ~]$ hostname
+isp02.tacc.utexas.edu
+[olusemiloremaku3773@isp02 ~]$ exit
+Script done, file is session.txt
+[olusemiloremaku3773@isp02 ~]$ cat session.txt | sed -n '5,$p' >> my_info.txt
+[olusemiloremaku3773@isp02 ~]$
