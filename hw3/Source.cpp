@@ -1,44 +1,41 @@
-// Precious Maku oem354
-// Exercise 6
+//Precious Maku oem354
+// Excercise 3
 
 #include <iostream>
-#include <vector>
+using namespace std;
 
-
-void splitOddEven(const std::vector<int>& input, std::vector<int>& odd, std::vector<int>& even) {
-    for (int num : input) {
-        if (num % 2 == 0) {
-            // If the number is even, add it to the 'even' vector
-            even.push_back(num);
+// Function that calculate the Collatz sequence length for a given starting number
+int collatzSequenceLength(long long n) {
+    int length = 1;
+    while (n != 1) {
+        if (n % 2 == 0) {
+            n = n / 2;
         }
         else {
-            // If the number is odd, add it to the 'odd' vector
-            odd.push_back(num);
+            n = 3 * n + 1;
         }
+        length++;
     }
+    return length;
 }
 
 int main() {
-    // Input 
-    std::vector<int> input = { 5, 6, 2, 4, 5 };
+    int max_length = 0;
+    int max_starting_number = 0;
 
-    std::vector<int> oddNumbers;
-    std::vector<int> evenNumbers;
-
-    splitOddEven(input, oddNumbers, evenNumbers);
-
-    // show odd and even vectors
-    std::cout << "Odd Numbers: ";
-    for (int num : oddNumbers) {
-        std::cout << num << " ";
+    // Repeat through starting values u1 from 1 to 1000
+    for (int u1 = 1; u1 <= 1000; u1++) {
+        int length = collatzSequenceLength(u1);
+        if (length > max_length) {
+            max_length = length;
+            max_starting_number = u1;
+            cout << "New maximum sequence length found! Starting number: " << max_starting_number << " Length: " << max_length << endl;
+        }
     }
-    std::cout << std::endl;
-
-    std::cout << "Even Numbers: ";
-    for (int num : evenNumbers) {
-        std::cout << num << " ";
-    }
-    std::cout << std::endl;
+    // What happens if you keep iterating after reaching 1?
+    cout << "The starting number that leads to the longest Collatz sequence is: " << max_starting_number << endl;
+    cout << "The sequence length is: " << max_length << endl;
 
     return 0;
 }
+//If you keep iterating the Collatz sequence after reaching 1,the sequence will continue in a loop. 
