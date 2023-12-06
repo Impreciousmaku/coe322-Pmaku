@@ -1,0 +1,7 @@
+Write a program that tests this. You need at least one loop that
+tests all primes r; for each r you then need to find the primes p, q
+that are equidistant to it.
+Use your prime generator. Do you use two generators for this, or is
+one enough? Do you need three, for p, q,r?
+For each r value, when the program finds the p, q values, print the
+p, q,r triple and move on to the next r.
