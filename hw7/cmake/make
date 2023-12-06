@@ -1,0 +1,18 @@
+# CMakeLists.txt
+
+project(impreciousmaku)
+
+# Set C++ standard to C++17
+set(CMAKE_CXX_STANDARD 17)
+
+# Add the fmtlib library
+find_package(fmt REQUIRED)
+
+# Include directories for fmtlib
+include_directories(${fmt_INCLUDE_DIRS})
+
+# Create the executable
+add_executable(impreciousmaku main.cpp)
+
+# Link fmtlib to the executable
+target_link_libraries(impreciousmaku PRIVATE fmt::fmt)
