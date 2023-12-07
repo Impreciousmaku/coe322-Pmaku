@@ -1,6 +1,6 @@
 // TACC Username: olusemiloremaku3773
 //Precious Maku oem354
-// Excercise 5
+// Excercise 6
 
 #include <iostream>
 #include <cmath>
